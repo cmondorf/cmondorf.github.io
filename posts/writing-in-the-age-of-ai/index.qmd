@@ -1,9 +1,9 @@
 ---
 title: "Writing in the age of AI"
-description: "Post description"
+description: "AI can produce content for you, but going through the writing process is still worth it"
 author: "Christian Mondorf"
 date: "2/29/2024"
-draft: true
+
 ---
 
 ChatGPT could have written this blog post in an instant. And if other prompts I've given it are any indication, it would have done a pretty good job, too. If I wasn't happy with the results, I could ask follow up questions or ask it to adjust the tone and it would have gradually refined its output to meet my expectations. 
