@@ -1,0 +1,18 @@
+---
+title: "Writing in the age of AI"
+description: "Post description"
+author: "Christian Mondorf"
+date: "2/29/2024"
+draft: true
+---
+
+ChatGPT could have written this blog post in an instant. And if other prompts I've given it are any indication, it would have done a pretty good job, too. If I wasn't happy with the results, I could ask follow up questions or ask it to adjust the tone and it would have gradually refined its output to meet my expectations. 
+
+This raises the question of what the value is of human-produced content. If I had asked a fellow human to write this post, I would have had to wait longer to get a result, and I'm not sure it would necessarily be better than what ChatGPT would have produced. But this way of asking questions about the value of written content might be missing the point. 
+
+What if instead of focusing on the output, we focused on what writing does to the writer? After all, one reason so many people are using AIs to write things for them is that the process of is laborious and tiring. You not only need to gather the material you want to write about, but you also need to work on your idea so that it takes form on the page. This requires clarifying your thoughts, brining assumptions into focus, and looking for the right words which is the same as saying you need to find how to express something in a nuanced and rigurous way. In this process, ideas are iteratively enriched and refined in a way that reveals deeper aspects of them to you all the while helping you internalise them.
+
+Thinking AI tools will make writing skills irrelevant is like thinking forklifts will make barbells obsolete. You can't compete with a forklift no matter how much you train, but a forklift won't make you any stronger, either. So if your goal is to move a pile of bricks, then by all means use a forklift, but if what you want is to work on building your own strength, then find some barbells to lift.
+
+Similarly, if what you want is clear and rigurous thought, write. An AI can produce the output faster than you can, but it can't change you the way writing changes you.
+
