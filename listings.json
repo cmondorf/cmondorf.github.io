@@ -2,9 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/writing-in-the-age-of-ai/index.html",
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/writing-in-the-age-of-ai/index.html"
     ]
   }
 ]
