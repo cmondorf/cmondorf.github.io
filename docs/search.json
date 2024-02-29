@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
@@ -18,13 +11,20 @@
     "href": "index.html",
     "title": "Deep Learnings",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nMay 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I come from a supply chain background but spend most of my time now helping people and machines learn from data. I’ve used Ruby, R and Python more or less extensively but these days I mostly write Python and dabble in deep learning.\nI’ve worked on four continents, mostly at the intersection between training/knowledge management, IT and supply chain management in both the private and humanitarian sectors.\nLanguages are a source of endless fascination for me. I speak five of them fluently and learning Mandarin currently helps keep me busy.\nI enjoy working as part of multidisciplinary teams.\nI founded and used to run the Hamburg R user group."
+    "text": "I come from a supply chain background but gradually found myself getting more and more into software development. I’ve used Ruby, R and Python more or less extensively but these days I mostly use Java and Spring. I’ve worked on four continents, mostly at the intersection between training/knowledge management, IT and supply chain management in both the private and humanitarian sectors.\nLanguages are a source of endless fascination for me. I speak five of them fluently and learning Mandarin currently helps keep me busy.\nI enjoy working as part of multidisciplinary teams and prefer remote assingments.\nI founded and used to run the Hamburg R user group."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
   }
 ]
