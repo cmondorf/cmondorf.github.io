@@ -2,7 +2,7 @@
 title: "Writing in the age of AI"
 description: "AI can produce content for you, but going through the writing process is still worth it"
 author: "Christian Mondorf"
-date: "2/29/2024"
+date: "2024-02-29"
 
 ---
 
