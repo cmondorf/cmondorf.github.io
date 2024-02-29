@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/writing-in-the-age-of-ai/index.html",
+    "href": "posts/writing-in-the-age-of-ai/index.html",
+    "title": "Writing in the age of AI",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "ChatGPT could have written this blog post in an instant. And if other prompts I’ve given it are any indication, it would have done a pretty good job, too. If I wasn’t happy with the results, I could ask follow up questions or ask it to adjust the tone and it would have gradually refined its output to meet my expectations.\nThis raises the question of what the value is of human-produced content. If I had asked a fellow human to write this post, I would have had to wait longer to get a result, and I’m not sure it would necessarily be better than what ChatGPT would have produced. But this way of asking questions about the value of written content might be missing the point.\nWhat if instead of focusing on the output, we focused on what writing does to the writer? After all, one reason so many people are using AIs to write things for them is that the process of is laborious and tiring. You not only need to gather the material you want to write about, but you also need to work on your idea so that it takes form on the page. This requires clarifying your thoughts, brining assumptions into focus, and looking for the right words which is the same as saying you need to find how to express something in a nuanced and rigurous way. In this process, ideas are iteratively enriched and refined in a way that reveals deeper aspects of them to you all the while helping you internalise them.\nThinking AI tools will make writing skills irrelevant is like thinking forklifts will make barbells obsolete. You can’t compete with a forklift no matter how much you train, but a forklift won’t make you any stronger, either. So if your goal is to move a pile of bricks, then by all means use a forklift, but if what you want is to work on building your own strength, then find some barbells to lift.\nSimilarly, if what you want is clear and rigurous thought, write. An AI can produce the output faster than you can, but it can’t change you the way writing changes you."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Deep Learnings",
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "This is a post with executable code."
   },
   {
     "objectID": "about.html",
@@ -21,10 +21,17 @@
     "text": "I come from a supply chain background but gradually found myself getting more and more into software development. I’ve used Ruby, R and Python more or less extensively but these days I mostly use Java and Spring. I’ve worked on four continents, mostly at the intersection between training/knowledge management, IT and supply chain management in both the private and humanitarian sectors.\nLanguages are a source of endless fascination for me. I speak five of them fluently and learning Mandarin currently helps keep me busy.\nI enjoy working as part of multidisciplinary teams and prefer remote assignments.\nI founded and used to run the Hamburg R user group."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Deep Learnings",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "Writing in the age of AI\n\n\n\n\n\nAI can produce content for you, but going through the writing process is still worth it\n\n\n\n\n\nFeb 29, 2024\n\n\nChristian Mondorf\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   }
 ]
