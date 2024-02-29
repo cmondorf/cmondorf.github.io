@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "This is a post with executable code."
   },
   {
     "objectID": "index.html",
@@ -21,10 +21,10 @@
     "text": "I come from a supply chain background but gradually found myself getting more and more into software development. I’ve used Ruby, R and Python more or less extensively but these days I mostly use Java and Spring. I’ve worked on four continents, mostly at the intersection between training/knowledge management, IT and supply chain management in both the private and humanitarian sectors.\nLanguages are a source of endless fascination for me. I speak five of them fluently and learning Mandarin currently helps keep me busy.\nI enjoy working as part of multidisciplinary teams and prefer remote assignments.\nI founded and used to run the Hamburg R user group."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   }
 ]
