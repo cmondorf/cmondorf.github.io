@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Deep Learnings",
     "section": "",
-    "text": "Writing in the age of AI\n\n\n\n\n\nAI can produce content for you, but going through the writing process is still worth it\n\n\n\n\n\nFeb 29, 2024\n\n\nChristian Mondorf\n\n\n\n\n\n\nNo matching items"
+    "text": "Leap exercise on Exercism\n\n\n\n\n\nCelebrating February 29th by revisiting a classic\n\n\n\n\n\nMar 1, 2024\n\n\nChristian Mondorf\n\n\n\n\n\n\n\n\n\n\n\n\nWriting in the age of AI\n\n\n\n\n\nAI can produce content for you, but going through the writing process is still worth it\n\n\n\n\n\nFeb 29, 2024\n\n\nChristian Mondorf\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -19,5 +19,12 @@
     "title": "About",
     "section": "",
     "text": "I come from a supply chain background but gradually found myself getting more and more into software development. I’ve used Ruby, R and Python more or less extensively but these days I mostly use Java and Spring. I’ve worked on four continents, mostly at the intersection between training/knowledge management, IT and supply chain management in both the private and humanitarian sectors.\nLanguages are a source of endless fascination for me. I speak five of them fluently and learning Mandarin currently helps keep me busy.\nI enjoy working as part of multidisciplinary teams and prefer remote assignments.\nI founded and used to run the Hamburg R user group."
+  },
+  {
+    "objectID": "posts/leap/index.html",
+    "href": "posts/leap/index.html",
+    "title": "Leap exercise on Exercism",
+    "section": "",
+    "text": "Yesterday was February 29th, a rare occasion that only happens once every four years and to celebrate it I solved the leap exercise on Exercism. This is something of a classic problem. Your assignment is to write a method that given a year will tell us if it’s a leap year or not. Leap years satisfy the following conditions: 1. Must be divisible by 4 2. Years evenly divisible by 100 are not leap years, unless… 3. they’re divisible by 400\nAnytime you think of something being “evenly divisible” you should think of the modulo operator, which appears in every programming language I’ve ever studied. In Java and elsewhere it’s represented by a percentage sign (%), and the result of a dividend modulo a divisor is the remainder of a division with the same numbers.\nSo for example, 4 divided by 2, has a remainder of 0, which is the same as saying 4 % 2 gives 0.\nThe number 5, on the other hand, is an odd number and therefor isn’t evenly divisible by 2. It gives a remainder of 1, or we could say 5 % 2 gives 1.\nArmed with this knowledge, it’s fairly straightforward to solve the problem using if statements to classify different years. My solution is here and looks like this:\nclass Leap {\n\n    boolean isLeapYear(int year) {\n        if (year % 4 == 0) {\n            if (year % 100 == 0) {\n                if (year % 400 == 0){\n                    return true;\n                }\n                return false;\n            }\n            return true;\n        }\n        return false;\n    }\n\n}\nThis solution is fine if not particularly elegant.\nThe dig deeper section of this exercise had a few interesting insights. They showed a solution that only uses chained boolean expressions to avoid using if statements, which resut in a single line of code but I’m not convinced it’s so much more readable.\nA much more interesting approach to me is the one that uses the ternary operator:\nboolean isLeapYear(int year) {\n    return year % 100 == 0 ? year % 400 == 0 : year % 4 == 0;\n}\nHere divisibility by 100 is tested first and determines if we check for divisibility by 400. If false we return whether the year is divisible by 4. The explanatory text points out this actually starts from an edge case, but I find it’s a great example to introduce ternary operators to students, so will try to remember this example.\nFinally, of course, the idiomatic solution for Java feels a bit like a cheat. Need to know if a year is a leap year? There’s an API for that:\nimport java.time.Year;\n\nclass Leap {\n\n    boolean isLeapYear(int year) {\n        return Year.of(year).isLeap();\n    }\n}"
   }
 ]
