@@ -1,0 +1,66 @@
+---
+title: "Leap exercise on Exercism"
+description: "Celebrating February 29th by revisiting a classic"
+author: "Christian Mondorf"
+date: "2024-03-01"
+draft: true
+---
+
+Yesterday was February 29th, a rare occasion that only happens once every four years and to celebrate it I solved the [leap exercise on Exercism](https://exercism.org/tracks/java/exercises/leap). This is something of a classic problem. Your assignment is to write a method that given a year will tell us if it's a leap year or not. Leap years satisfy the following conditions:
+1. Must be divisible by 4
+2. Years evenly divisible by 100 are not leap years, unless...
+3. they're divisible by 400
+
+Anytime you think of something being "evenly divisible" you should think of the modulo operator, which appears in every programming language I've ever studied. In Java and elsewhere it's represented by a percentage sign (%), and the result of a dividend modulo a divisor is the remainder of a division with the same numbers.
+
+So for example, 4 divided by 2, has a remainder of 0, which is the same as saying 4 % 2 gives 0.
+
+The number 5, on the other hand, is an odd number and therefor isn't evenly divisible by 2. It gives a remainder of 1, or we could say 5 % 2 gives 1.
+
+Armed with this knowledge, it's fairly straightforward to solve the problem using if statements to classify different years. My solution is [here](https://exercism.org/tracks/java/exercises/leap/solutions/cmondorf) and looks like this:
+
+```java
+class Leap {
+
+    boolean isLeapYear(int year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0){
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
+        return false;
+    }
+
+}
+```
+This solution is fine if not particularly elegant. 
+
+The dig deeper section of this exercise had a few interesting insights. They showed a solution that only uses chained boolean expressions to avoid using if statements, which resut in a single line of code but I'm not convinced it's so much more readable.
+
+A much more interesting approach to me is the one that uses the ternary operator:
+
+```java
+boolean isLeapYear(int year) {
+    return year % 100 == 0 ? year % 400 == 0 : year % 4 == 0;
+}
+```
+
+Here divisibility by 100 is tested first and determines if we check for divisibility by 400. If false we return whether the year is divisible by 4. The explanatory text points out this actually starts from an edge case, but I find it's a great example to introduce ternary operators to students, so will try to remember this example.
+
+Finally, of course, the idiomatic solution for Java feels a bit like a cheat. Need to know if a year is a leap year? There's an API for that:
+
+```java
+import java.time.Year;
+
+class Leap {
+
+    boolean isLeapYear(int year) {
+        return Year.of(year).isLeap();
+    }
+}
+```
+
