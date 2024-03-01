@@ -3,7 +3,7 @@ title: "Leap exercise on Exercism"
 description: "Celebrating February 29th by revisiting a classic"
 author: "Christian Mondorf"
 date: "2024-03-01"
-draft: true
+
 ---
 
 Yesterday was February 29th, a rare occasion that only happens once every four years and to celebrate it I solved the [leap exercise on Exercism](https://exercism.org/tracks/java/exercises/leap). This is something of a classic problem. Your assignment is to write a method that given a year will tell us if it's a leap year or not. Leap years satisfy the following conditions:
