@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Christian Mondorf">
+<meta name="dcterms.date" content="2026-01-03">
+<meta name="description" content="Trying out Answer.ai’s super simple PaaS">
 
-<title>index – Deep Learnings</title>
+<title>First steps with pla.sh – Deep Learnings</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,7 +110,40 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">First steps with pla.sh</h1>
+                  <div>
+        <div class="description">
+          Trying out Answer.ai’s super simple PaaS
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Christian Mondorf </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 3, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -117,6 +153,48 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
+<p>At 35 years old and after massive adoption, Python is definitely a mature language. It’s also become the language of choice for data science, machine learning and AI development. However, using it for web development still often requires using other languages which themselves can have steep learning curves and add to the complexity of even simple projects.</p>
+<p>That’s why I was so excited when FastHTML came out in 2024. In case you missed it, FastHTML allows you to create HTML pages written entirely in Python where Python functions replace HTML tags. This meant you could develop web applications without leaving Python as was needed until now with Django or Flask. FastHTML is the new kid on the block and isn’t as mature nor does it have as widespread a user base as the other two, but the ease of use suggest adoption will be coming along given enough time.</p>
+<p>Still, actually getting a page of your machine and into the cloud to be served to users still required using cloud providers. And although some paired down PaaS offerings have come along with flatter learning curves than AWS or GC (such as Railway or Render), you still needed a lot of manual set up to configure databases, servers, set up rules for scaling and elasticity, etc.</p>
+<p>Answer.ai (the company behind FastHTML) have now unveiled a new hosting service that promises to allow you to deploy directly using Python with minima set up. The service is still in beta and therefor probably not ready for anything mission critical, but I decided to give it a spin.</p>
+<p>After creating a new folder and creating a Python venv environment, I installed the very minimum tools required to bring the most basic page online using FastHTML:</p>
+<pre><code>pip install python-fasthtml
+pip install monsterui
+pip install plash-cli</code></pre>
+<p>And that’s it. MonsterUI provides reusable CSS components for styling FastHTML sites. The selling point is it should make Tailwind a breeze to use (pun!).</p>
+<p>The plash-cli tool is a command line tool that handles everything about deployment for you. A nice touch is how it authenticates you the first time you set it up. You run the command <code>plash login</code> and a browser window opens up. If you’re logged into your Plash account on the dashboard, then that’s it, you’re authenticated!</p>
+<p>Next, I built the most minimal hello world FastHTML page you can build using MonsterUI:</p>
+<pre><code>from fasthtml.common import  *
+
+from monsterui.all import  *
+
+  
+
+app, rt = fast_app(hdrs=Theme.blue.headers())
+
+  
+
+@rt('/')
+
+def  get():
+
+return Titled("Hello world!",
+
+Card(H2("This is my helloworld!")),
+
+P("This app uses MonsterUI for styling."))
+
+  
+
+serve()</code></pre>
+<p>One particularity of Plash is it requires you to include a <code>requirements.txt</code> file listing any packages you need in the same folder as the rest of the stuff you’ll be deploying. Here’s what my <code>requirements.txt</code> looks like:</p>
+<pre><code>python-fasthtml
+
+monsterui</code></pre>
+<p>Now, I was ready to deploy. I ran <code>plash deploy</code> in the command line and minute later, my page was accessible at https://dazzling-otter-descends-rur.pla.sh/.</p>
+<p>To call this a web project would be a massive exageration, but I enjoyed testing out the flow from FastHTML file creation to deployment and will be exploring other functionality like deploying persistent memory and more complex apps in the coming days and weeks.</p>
+<p>Things are looking up for web develin the Python world!</p>
 
 
 
