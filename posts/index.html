@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Christian Mondorf">
+<meta name="dcterms.date" content="2026-01-03">
+<meta name="description" content="Trying out Answer.ai’s super simple PaaS">
 
-<title>Deep Learnings</title>
+<title>First steps with pla.sh – Deep Learnings</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,77 +71,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Deep Learnings</span>
     </a>
   </div>
@@ -151,7 +94,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -169,117 +112,93 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Deep Learnings</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">First steps with pla.sh</h1>
+                  <div>
+        <div class="description">
+          Trying out Answer.ai’s super simple PaaS
+        </div>
+      </div>
+                </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Christian Mondorf </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 3, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>At 35 years old and after massive adoption, Python is definitely a mature language. It’s also become the language of choice for data science, machine learning and AI development. However, using it for web development still often requires using other languages which themselves can have steep learning curves and add to the complexity of even simple projects.</p>
+<p>That’s why I was so excited when FastHTML came out in 2024. In case you missed it, FastHTML allows you to create HTML pages written entirely in Python where Python functions replace HTML tags. This meant you could develop web applications without leaving Python as was needed until now with Django or Flask. FastHTML is the new kid on the block and isn’t as mature nor does it have as widespread a user base as the other two, but the ease of use suggest adoption will be coming along given enough time.</p>
+<p>Still, actually getting a page of your machine and into the cloud to be served to users still required using cloud providers. And although some paired down PaaS offerings have come along with flatter learning curves than AWS or GC (such as Railway or Render), you still needed a lot of manual set up to configure databases, servers, set up rules for scaling and elasticity, etc.</p>
+<p>Answer.ai (the company behind FastHTML) have now unveiled a new hosting service that promises to allow you to deploy directly using Python with minima set up. The service is still in beta and therefor probably not ready for anything mission critical, but I decided to give it a spin.</p>
+<p>After creating a new folder and creating a Python venv environment, I installed the very minimum tools required to bring the most basic page online using FastHTML:</p>
+<pre><code>pip install python-fasthtml
+pip install monsterui
+pip install plash-cli</code></pre>
+<p>And that’s it. MonsterUI provides reusable CSS components for styling FastHTML sites. The selling point is it should make Tailwind a breeze to use (pun!).</p>
+<p>The plash-cli tool is a command line tool that handles everything about deployment for you. A nice touch is how it authenticates you the first time you set it up. You run the command <code>plash login</code> and a browser window opens up. If you’re logged into your Plash account on the dashboard, then that’s it, you’re authenticated!</p>
+<p>Next, I built the most minimal hello world FastHTML page you can build using MonsterUI:</p>
+<pre><code>from fasthtml.common import  *
+
+from monsterui.all import  *
+
+  
+
+app, rt = fast_app(hdrs=Theme.blue.headers())
+
+  
+
+@rt('/')
+
+def  get():
+
+return Titled("Hello world!",
+
+Card(H2("This is my helloworld!")),
+
+P("This app uses MonsterUI for styling."))
+
+  
+
+serve()</code></pre>
+<p>One particularity of Plash is it requires you to include a <code>requirements.txt</code> file listing any packages you need in the same folder as the rest of the stuff you’ll be deploying. Here’s what my <code>requirements.txt</code> looks like:</p>
+<pre><code>python-fasthtml
+
+monsterui</code></pre>
+<p>Now, I was ready to deploy. I ran <code>plash deploy</code> in the command line and minute later, my page was accessible at https://dazzling-otter-descends-rur.pla.sh/.</p>
+<p>To call this a web project would be a massive exageration, but I enjoyed testing out the flow from FastHTML file creation to deployment and will be exploring other functionality like deploying persistent memory and more complex apps in the coming days and weeks.</p>
+<p>Things are looking up for web develin the Python world!</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1767398400000" data-listing-file-modified-sort="1767455645705" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="531">
-<div class="thumbnail"><a href="./posts/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/index.html" class="no-external">First steps with pla.sh</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/index.html" class="no-external">
-<p>Trying out Answer.ai’s super simple PaaS</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/index.html" class="no-external">
-<div class="listing-date">
-Jan 3, 2026
-</div>
-<div class="listing-author">
-Christian Mondorf
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1709251200000" data-listing-file-modified-sort="1767455645705" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="570">
-<div class="thumbnail"><a href="./posts/leap/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/leap/index.html" class="no-external">Leap exercise on Exercism</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/leap/index.html" class="no-external">
-<p>Celebrating February 29th by revisiting a classic</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/leap/index.html" class="no-external">
-<div class="listing-date">
-Mar 1, 2024
-</div>
-<div class="listing-author">
-Christian Mondorf
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1709164800000" data-listing-file-modified-sort="1767455645705" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="363">
-<div class="thumbnail"><a href="./posts/writing-in-the-age-of-ai/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/writing-in-the-age-of-ai/index.html" class="no-external">Writing in the age of AI</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/writing-in-the-age-of-ai/index.html" class="no-external">
-<p>AI can produce content for you, but going through the writing process is still worth it</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/writing-in-the-age-of-ai/index.html" class="no-external">
-<div class="listing-date">
-Feb 29, 2024
-</div>
-<div class="listing-author">
-Christian Mondorf
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

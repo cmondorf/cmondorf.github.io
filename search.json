@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I come from a supply chain background but gradually found myself getting more and more into software development. I’ve used Ruby, R and Python more or less extensively but these days I mostly use Java and Spring. I’ve worked on four continents, mostly at the intersection between training/knowledge management, IT and supply chain management in both the private and humanitarian sectors.\nLanguages are a source of endless fascination for me. I speak five of them fluently and learning Mandarin currently helps keep me busy.\nI enjoy working as part of multidisciplinary teams and prefer remote assignments.\nI founded and used to run the Hamburg R user group."
+  },
+  {
     "objectID": "posts/writing-in-the-age-of-ai/index.html",
     "href": "posts/writing-in-the-age-of-ai/index.html",
     "title": "Writing in the age of AI",
@@ -11,14 +18,14 @@
     "href": "index.html",
     "title": "Deep Learnings",
     "section": "",
-    "text": "Leap exercise on Exercism\n\n\n\n\n\nCelebrating February 29th by revisiting a classic\n\n\n\n\n\nMar 1, 2024\n\n\nChristian Mondorf\n\n\n\n\n\n\n\n\n\n\n\n\nWriting in the age of AI\n\n\n\n\n\nAI can produce content for you, but going through the writing process is still worth it\n\n\n\n\n\nFeb 29, 2024\n\n\nChristian Mondorf\n\n\n\n\n\n\nNo matching items"
+    "text": "First steps with pla.sh\n\n\nTrying out Answer.ai’s super simple PaaS\n\n\n\n\n\nJan 3, 2026\n\n\nChristian Mondorf\n\n\n\n\n\n\n\n\n\n\n\n\nLeap exercise on Exercism\n\n\nCelebrating February 29th by revisiting a classic\n\n\n\n\n\nMar 1, 2024\n\n\nChristian Mondorf\n\n\n\n\n\n\n\n\n\n\n\n\nWriting in the age of AI\n\n\nAI can produce content for you, but going through the writing process is still worth it\n\n\n\n\n\nFeb 29, 2024\n\n\nChristian Mondorf\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "First steps with pla.sh",
     "section": "",
-    "text": "I come from a supply chain background but gradually found myself getting more and more into software development. I’ve used Ruby, R and Python more or less extensively but these days I mostly use Java and Spring. I’ve worked on four continents, mostly at the intersection between training/knowledge management, IT and supply chain management in both the private and humanitarian sectors.\nLanguages are a source of endless fascination for me. I speak five of them fluently and learning Mandarin currently helps keep me busy.\nI enjoy working as part of multidisciplinary teams and prefer remote assignments.\nI founded and used to run the Hamburg R user group."
+    "text": "At 35 years old and after massive adoption, Python is definitely a mature language. It’s also become the language of choice for data science, machine learning and AI development. However, using it for web development still often requires using other languages which themselves can have steep learning curves and add to the complexity of even simple projects.\nThat’s why I was so excited when FastHTML came out in 2024. In case you missed it, FastHTML allows you to create HTML pages written entirely in Python where Python functions replace HTML tags. This meant you could develop web applications without leaving Python as was needed until now with Django or Flask. FastHTML is the new kid on the block and isn’t as mature nor does it have as widespread a user base as the other two, but the ease of use suggest adoption will be coming along given enough time.\nStill, actually getting a page of your machine and into the cloud to be served to users still required using cloud providers. And although some paired down PaaS offerings have come along with flatter learning curves than AWS or GC (such as Railway or Render), you still needed a lot of manual set up to configure databases, servers, set up rules for scaling and elasticity, etc.\nAnswer.ai (the company behind FastHTML) have now unveiled a new hosting service that promises to allow you to deploy directly using Python with minima set up. The service is still in beta and therefor probably not ready for anything mission critical, but I decided to give it a spin.\nAfter creating a new folder and creating a Python venv environment, I installed the very minimum tools required to bring the most basic page online using FastHTML:\npip install python-fasthtml\npip install monsterui\npip install plash-cli\nAnd that’s it. MonsterUI provides reusable CSS components for styling FastHTML sites. The selling point is it should make Tailwind a breeze to use (pun!).\nThe plash-cli tool is a command line tool that handles everything about deployment for you. A nice touch is how it authenticates you the first time you set it up. You run the command plash login and a browser window opens up. If you’re logged into your Plash account on the dashboard, then that’s it, you’re authenticated!\nNext, I built the most minimal hello world FastHTML page you can build using MonsterUI:\nfrom fasthtml.common import  *\n\nfrom monsterui.all import  *\n\n  \n\napp, rt = fast_app(hdrs=Theme.blue.headers())\n\n  \n\n@rt('/')\n\ndef  get():\n\nreturn Titled(\"Hello world!\",\n\nCard(H2(\"This is my helloworld!\")),\n\nP(\"This app uses MonsterUI for styling.\"))\n\n  \n\nserve()\nOne particularity of Plash is it requires you to include a requirements.txt file listing any packages you need in the same folder as the rest of the stuff you’ll be deploying. Here’s what my requirements.txt looks like:\npython-fasthtml\n\nmonsterui\nNow, I was ready to deploy. I ran plash deploy in the command line and minute later, my page was accessible at https://dazzling-otter-descends-rur.pla.sh/.\nTo call this a web project would be a massive exageration, but I enjoyed testing out the flow from FastHTML file creation to deployment and will be exploring other functionality like deploying persistent memory and more complex apps in the coming days and weeks.\nThings are looking up for web develin the Python world!"
   },
   {
     "objectID": "posts/leap/index.html",
