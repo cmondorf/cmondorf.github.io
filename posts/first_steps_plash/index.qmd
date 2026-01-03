@@ -1,1 +1,69 @@
+---
+title: "First steps with pla.sh"
+description: "Trying out Answer.ai's super simple PaaS"
+author: "Christian Mondorf"
+date: "2026-01-03"
 
+---
+
+At 35 years old and after massive adoption, Python is definitely a mature language. It's also become the language of choice for data science, machine learning and AI development. However, using it for web development still often requires using other languages which themselves can have steep learning curves and add to the complexity of even simple projects.
+
+That's why I was so excited when FastHTML came out in 2024. In case you missed it, FastHTML allows you to create HTML pages written entirely in Python where Python functions replace HTML tags. This meant you could develop web applications without leaving Python as was needed until now with Django or Flask. FastHTML is the new kid on the block and isn't as mature nor does it have as widespread a user base as the other two, but the ease of use suggest adoption will be coming along given enough time. 
+
+Still, actually getting a page of your machine and into the cloud to be served to users still required using cloud providers. And although some paired down PaaS offerings have come along with flatter learning curves than AWS or GC (such as Railway or Render), you still needed a lot of manual set up to configure databases, servers, set up rules for scaling and elasticity, etc. 
+
+Answer.ai (the company behind FastHTML) have now unveiled a new hosting service that promises to allow you to deploy directly using Python with minima set up. The service is still in beta and therefor probably not ready for anything mission critical, but I decided to give it a spin. 
+
+After creating a new folder and creating a Python venv environment, I installed the very minimum tools required to bring the most basic page online using FastHTML:
+
+```
+pip install python-fasthtml
+pip install monsterui
+pip install plash-cli
+```
+
+And that's it. MonsterUI provides reusable CSS components for styling FastHTML sites. The selling point is it should make Tailwind a breeze to use (pun!). 
+
+The plash-cli tool is a command line tool that handles everything about deployment for you. A nice touch is how it authenticates you the first time you set it up. You run the command `plash login` and a browser window opens up. If you're logged into your Plash account on the dashboard, then that's it, you're authenticated!
+
+Next, I built the most minimal hello world FastHTML page you can build using MonsterUI:
+
+```
+from fasthtml.common import  *
+
+from monsterui.all import  *
+
+  
+
+app, rt = fast_app(hdrs=Theme.blue.headers())
+
+  
+
+@rt('/')
+
+def  get():
+
+return Titled("Hello world!",
+
+Card(H2("This is my helloworld!")),
+
+P("This app uses MonsterUI for styling."))
+
+  
+
+serve()
+```
+
+One particularity of Plash is it requires you to include a `requirements.txt` file listing any packages you need in the same folder as the rest of the stuff you'll be deploying. Here's what my `requirements.txt` looks like:
+
+````
+python-fasthtml
+
+monsterui
+````
+
+Now, I was ready to deploy. I ran `plash deploy` in the command line and minute later, my page was accessible at https://dazzling-otter-descends-rur.pla.sh/.
+
+To call this a web project would be a massive exageration, but I enjoyed testing out the flow from FastHTML file creation to deployment and will be exploring other functionality like deploying persistent memory and more complex apps in the coming days and weeks. 
+
+Things are looking up for web develin the Python world!
